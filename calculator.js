@@ -59,6 +59,18 @@ standardButton[14].addEventListener('click', function () {
     tmp = 0;
     display.innerText = result;
 });
+
+//minus
+standardButton[10].addEventListener('click', function () {
+    if (result === 0) {
+        result = tmp;
+    } else {
+        result = result - tmp;
+        tmp = 0;
+    }
+    display.innerText = result;
+});
+
 //równa się
 standardButton[16].addEventListener('click', function () {
     result = result + tmp;
@@ -75,8 +87,6 @@ standardButton[1].addEventListener('click', function () {
     tmp = 0;
     display.innerText = ``;
 });
-
-
 
 /*for (i = 0; i < 17; i++) {
   if (!isNaN(parseInt(`${standardButton[i].innerText}`))) {
