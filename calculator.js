@@ -1,8 +1,9 @@
-const standardButton = document.querySelectorAll(".standard-button");
-const display = document.querySelector(".display-row");
+const standardButton = document.querySelectorAll(`.standard-button`);
+const display = document.querySelector(`.display-row`);
 let result = 0;
 let tmp;
 display.innerHTML = result;
+let operaiton;
 
 standardButton[15].addEventListener('click', function () {
     tmp = parseInt(standardButton[15].innerText);
@@ -55,13 +56,19 @@ standardButton[3].addEventListener('click', function () {
 });
 //plus
 standardButton[14].addEventListener('click', function () {
-    result = result + tmp;
-    tmp = 0;
+    operaiton = `+`;
+    if (result === 0) {
+        result = tmp;
+    } else {
+        result = result + tmp;
+        tmp = 0;
+    }
     display.innerText = result;
 });
 
 //minus
 standardButton[10].addEventListener('click', function () {
+    operaiton = `-`;
     if (result === 0) {
         result = tmp;
     } else {
@@ -71,9 +78,50 @@ standardButton[10].addEventListener('click', function () {
     display.innerText = result;
 });
 
+//mnozenie
+standardButton[6].addEventListener('click', function () {
+    operaiton = `*`;
+    if (result === 0) {
+        result = tmp;
+    } else if (tmp === 0) {
+        result = 1;
+    } else {
+        result = result * tmp;
+        tmp = 0;
+    }
+    display.innerText = result;
+});
+
+//dzielenie
+standardButton[2].addEventListener('click', function () {
+    operaiton = `/`;
+    if (result === 0) {
+        result = tmp;
+    } else if (tmp === 0) {
+        result = 'not a number';
+    }
+    else {
+        result = result / tmp;
+        tmp = 0;
+    }
+    display.innerText = result;
+});
+
 //równa się
 standardButton[16].addEventListener('click', function () {
-    result = result + tmp;
+    if (operaiton === `+`) {
+        result = result + tmp;
+        console.log(`${operaiton}`);
+    } else if (operaiton === `-`) {
+        result = result - tmp;
+        console.log(`${operaiton}`);
+    } else if (operaiton === `*`) {
+        result = result * tmp;
+        console.log(`${operaiton}`);
+    } else  {
+        result = result / tmp;
+        console.log(`${operaiton}`);
+    }
     display.innerText = result;
     tmp = 0;
 });
@@ -87,23 +135,3 @@ standardButton[1].addEventListener('click', function () {
     tmp = 0;
     display.innerText = ``;
 });
-
-/*for (i = 0; i < 17; i++) {
-  if (!isNaN(parseInt(`${standardButton[i].innerText}`))) {
-    console.log(`${standardButton[i].innerText}`);
-  } else console.log(tmp);
-}
-standardButton[4].addEventListener('click', function () {
-    display.innerText = `${tmp[4]}`;
-});
-for (j = 0; j < standardButton.length; j++) {
-    console.log(parseInt(tmp));
-    standardButton[j].addEventListener("click", {
-      handleEvent: function (event) {console.log(`${tmp}`);
-          /*if (isNaN(parseInt(`${tmp[j]}`))) {
-            console.log(`${tmp[j]}`);
-            display.innerText = tmp[j];
-        } else console.log(`tylek`);
-        }});
-    };
-    */
