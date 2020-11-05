@@ -1,66 +1,76 @@
 const standardButton = document.querySelectorAll(`.standard-button`);
 const display = document.querySelector(`.display-row`);
-let result = 0;
+let result;
 let tmp;
-display.innerHTML = result;
 let operaiton;
 
 standardButton[15].addEventListener('click', function () {
-    tmp = parseInt(standardButton[15].innerText);
+    tmp = tmp + standardButton[15].innerText;
+    parseInt(tmp);
     display.innerHTML = tmp;
 });
 
 standardButton[13].addEventListener('click', function () {
-    tmp = parseInt(standardButton[13].innerText);
+    tmp = tmp + standardButton[13].innerText;
+    parseInt(tmp);
     display.innerHTML = tmp;
 });
 
 standardButton[12].addEventListener('click', function () {
-    tmp = parseInt(standardButton[12].innerText);
+    tmp = tmp + standardButton[12].innerText;
+    parseInt(tmp);
     display.innerHTML = tmp;
 });
 
 standardButton[11].addEventListener('click', function () {
-    tmp = parseInt(standardButton[11].innerText);
+    tmp = tmp + standardButton[11].innerText;
+    parseInt(tmp);
     display.innerHTML = tmp;
 });
 
 standardButton[9].addEventListener('click', function () {
-    tmp = parseInt(standardButton[9].innerText);
+    tmp = tmp + standardButton[9].innerText;
+    parseInt(tmp);
     display.innerHTML = tmp;
 });
 
 standardButton[8].addEventListener('click', function () {
-    tmp = parseInt(standardButton[8].innerText);
+    tmp = tmp + standardButton[8].innerText;
+    parseInt(tmp);
     display.innerHTML = tmp;
 });
 
 standardButton[7].addEventListener('click', function () {
-    tmp = parseInt(standardButton[7].innerText);
+    tmp = tmp + standardButton[7].innerText;
+    parseInt(tmp);
     display.innerHTML = tmp;
 });
 
 standardButton[5].addEventListener('click', function () {
-    tmp = parseInt(standardButton[5].innerText);
+    tmp = tmp + standardButton[5].innerText;
+    parseInt(tmp);
     display.innerHTML = tmp;
 });
 
 standardButton[4].addEventListener('click', function () {
-    tmp = parseInt(standardButton[4].innerText);
+    tmp = tmp + standardButton[4].innerText;
+    parseInt(tmp);
     display.innerHTML = tmp;
 });
 
 standardButton[3].addEventListener('click', function () {
-    tmp = parseInt(standardButton[3].innerText);
+    tmp = tmp + standardButton[3].innerText;
+    parseInt(tmp);
     display.innerHTML = tmp;
 });
 //plus
 standardButton[14].addEventListener('click', function () {
     operaiton = `+`;
     if (result === 0) {
-        result = tmp;
+        result = parseInt(tmp);
+        tmp = 0;
     } else {
-        result = result + tmp;
+        result = parseInt(result) + parseInt(tmp);
         tmp = 0;
     }
     display.innerText = result;
@@ -71,6 +81,7 @@ standardButton[10].addEventListener('click', function () {
     operaiton = `-`;
     if (result === 0) {
         result = tmp;
+        tmp = 0;
     } else {
         result = result - tmp;
         tmp = 0;
@@ -83,6 +94,7 @@ standardButton[6].addEventListener('click', function () {
     operaiton = `*`;
     if (result === 0) {
         result = tmp;
+        tmp = 0;
     } else if (tmp === 0) {
         result = 1;
     } else {
@@ -97,6 +109,7 @@ standardButton[2].addEventListener('click', function () {
     operaiton = `/`;
     if (result === 0) {
         result = tmp;
+        tmp = 0;
     } else if (tmp === 0) {
         result = 'not a number';
     }
@@ -110,7 +123,7 @@ standardButton[2].addEventListener('click', function () {
 //równa się
 standardButton[16].addEventListener('click', function () {
     if (operaiton === `+`) {
-        result = result + tmp;
+        result = parseInt(result) + parseInt(tmp);
         console.log(`${operaiton}`);
     } else if (operaiton === `-`) {
         result = result - tmp;

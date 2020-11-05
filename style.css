@@ -6,6 +6,7 @@
     display: flex;
     width: 300px;
     flex-direction: column;
+    border-radius: 50;
 }
 
 .display-row {
@@ -50,6 +51,15 @@
     border: 1px solid black;
     font-size: 35px;
     line-height: 45px;
+    cursor: pointer;
+}
+
+.standard-button:hover {
+    background-color: lightgray;
+}
+
+.standard-button:active {
+    background-color: darkgray;
 }
 
 .clear-button {
@@ -58,6 +68,10 @@
 
 .operation-button {
     background-color: coral;
+}
+
+.standard-button:last-child:hover {
+    background-color: lightcoral;
 }
 
 .zero-button {
