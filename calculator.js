@@ -7,61 +7,61 @@ let operaiton;
 standardButton[15].addEventListener('click', function () {
     tmp = tmp + standardButton[15].innerText;
     parseInt(tmp);
-    display.innerHTML = tmp;
+    display.innerHTML = tmp.replace(/^0+(?!\.|$)/,``);
 });
 
 standardButton[13].addEventListener('click', function () {
     tmp = tmp + standardButton[13].innerText;
     parseInt(tmp);
-    display.innerHTML = tmp;
+    display.innerHTML = tmp.replace(/^0+(?!\.|$)/,``);
 });
 
 standardButton[12].addEventListener('click', function () {
     tmp = tmp + standardButton[12].innerText;
     parseInt(tmp);
-    display.innerHTML = tmp;
+    display.innerHTML = tmp.replace(/^0+(?!\.|$)/,``);
 });
 
 standardButton[11].addEventListener('click', function () {
     tmp = tmp + standardButton[11].innerText;
     parseInt(tmp);
-    display.innerHTML = tmp;
+    display.innerHTML = tmp.replace(/^0+(?!\.|$)/,``);
 });
 
 standardButton[9].addEventListener('click', function () {
     tmp = tmp + standardButton[9].innerText;
     parseInt(tmp);
-    display.innerHTML = tmp;
+    display.innerHTML = tmp.replace(/^0+(?!\.|$)/,``);
 });
 
 standardButton[8].addEventListener('click', function () {
     tmp = tmp + standardButton[8].innerText;
     parseInt(tmp);
-    display.innerHTML = tmp;
+    display.innerHTML = tmp.replace(/^0+(?!\.|$)/,``);
 });
 
 standardButton[7].addEventListener('click', function () {
     tmp = tmp + standardButton[7].innerText;
     parseInt(tmp);
-    display.innerHTML = tmp;
+    display.innerHTML = tmp.replace(/^0+(?!\.|$)/,``);
 });
 
 standardButton[5].addEventListener('click', function () {
     tmp = tmp + standardButton[5].innerText;
     parseInt(tmp);
-    display.innerHTML = tmp;
+    display.innerHTML = tmp.replace(/^0+(?!\.|$)/,``);
 });
 
 standardButton[4].addEventListener('click', function () {
     tmp = tmp + standardButton[4].innerText;
     parseInt(tmp);
-    display.innerHTML = tmp;
+    display.innerHTML = tmp.replace(/^0+(?!\.|$)/,``);
 });
 
 standardButton[3].addEventListener('click', function () {
     tmp = tmp + standardButton[3].innerText;
     parseInt(tmp);
-    display.innerHTML = tmp;
+    display.innerHTML = tmp.replace(/^0+(?!\.|$)/,``);
 });
 //plus
 standardButton[14].addEventListener('click', function () {
