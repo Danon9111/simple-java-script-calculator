@@ -1,7 +1,7 @@
 const standardButton = document.querySelectorAll(`.standard-button`);
 const display = document.querySelector(`.display-row`);
-let result;
-let tmp;
+let result = 0;
+let tmp = 0;
 let operaiton;
 
 standardButton[15].addEventListener('click', function () {
